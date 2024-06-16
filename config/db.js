@@ -1,21 +1,12 @@
-// CREATE DATABASE todoapp;
-// \c todoapp;
-
-// CREATE TABLE todos (
-//     id SERIAL PRIMARY KEY,
-//     title VARCHAR(100) NOT NULL,
-//     completed BOOLEAN DEFAULT FALSE
-// );
-
-// config/db.js
 const { Pool } = require('pg');
+require('dotenv').config();
 
 const pool = new Pool({
-  user: 'your_username',
-  host: 'localhost',
-  database: 'todoapp',
-  password: 'your_password',
-  port: 5432,
+  user: process.env.DB_USER,
+  host: process.env.DB_HOST,
+  database: process.env.DB_NAME,
+  password: process.env.DB_PASSWORD,
+  port: process.env.DB_PORT,
 });
 
 module.exports = pool;
