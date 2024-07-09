@@ -1,0 +1,25 @@
+.App {
+  text-align: center;
+}
+
+select {
+  margin: 20px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  padding: 5px;
+  font-size: 18px;
+}
+
+button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}

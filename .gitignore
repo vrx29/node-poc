@@ -1,62 +1,24 @@
-# Node.js
-node_modules/
-npm-debug.log
-yarn-error.log
-
 # Logs
 logs
 *.log
-logs/*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# Dependency directories
-node_modules/
-jspm_packages/
-
-# Optional npm cache directory
-.npm
-
-# Optional eslint cache
-.eslintcache
-
-# dotenv environment variable files
-.env
-.env.test
+node_modules
+dist
+dist-ssr
+*.local
 
 # Editor directories and files
-.vscode/
-.idea/
-*.sublime-project
-*.sublime-workspace
-
-# MacOS files
+.vscode/*
+!.vscode/extensions.json
+.idea
 .DS_Store
-
-# Coverage directory used by tools like istanbul
-coverage/
-
-# Production
-dist/
-build/
-
-# Database files
-*.db
-*.sqlite
-*.sqlite3
-.pgdata
-
-# Temporary files
-tmp/
-temp/
-*.tmp
-*.temp
-
-# Test reports
-*.out
-*.log
-
-# Temporary files created by IDEs
-*.swp
-*.swo
-*.bak
-*~
-*.orig
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
