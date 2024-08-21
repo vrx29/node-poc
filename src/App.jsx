@@ -1,53 +1,16 @@
-import { useState } from 'react';
-import Dropdown from './Dropdown';
-import QuestionList from './QuestionList';
+import Dropdown from './components/Dropdown';
 
 const App = () => {
-  const topics = {
-    React: [
-      'What is React?',
-      'What are hooks in React?',
-      'Explain the virtual DOM in React.',
-    ],
-    JavaScript: [
-      'What is a closure?',
-      'Explain the event loop.',
-      'What is hoisting?',
-    ],
-    CSS: ['What is Flexbox?', 'What is Grid layout?', 'Explain the box model.'],
-  };
-
-  const [selectedTopic, setSelectedTopic] = useState('');
-  const [answers, setAnswers] = useState({});
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-
-  const handleAnswer = (question, answer) => {
-    setAnswers((prevAnswers) => ({
-      ...prevAnswers,
-      [question]: answer,
-    }));
-    setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
-  };
+  const radioOptions = ['Option 1', 'Option 2', 'Option 3'];
+  const checkboxOptions = ['Option A', 'Option B', 'Option C', 'Option D'];
 
   return (
     <div className='App'>
-      <h1>Topic Questions App</h1>
-      <Dropdown
-        topics={Object.keys(topics)}
-        onSelect={(topic) => {
-          setSelectedTopic(topic);
-          setAnswers({});
-          setCurrentQuestionIndex(0);
-        }}
-      />
-      {selectedTopic && (
-        <QuestionList
-          questions={topics[selectedTopic]}
-          currentQuestionIndex={currentQuestionIndex}
-          onAnswer={handleAnswer}
-          answers={answers}
-        />
-      )}
+      <h2>Single Selection (Radio Buttons)</h2>
+      <Dropdown options={radioOptions} multiple={false} />
+
+      <h2>Multiple Selections (Checkboxes)</h2>
+      <Dropdown options={checkboxOptions} multiple={true} />
     </div>
   );
 };
