@@ -1,0 +1,20 @@
+Nado Presentation
+- Presented there market issues where most of the ticket and solutions were related to MIS and SSSP devices
+- Discussed two solutions
+  - Buffalo wings
+  - Walmart : Emergency alerts through LFD's.
+
+SRT Market Issues
+- Closed captions not working with udp streams on Tizen 6.5 & above
+- Web content not loaded by MIS
+- Vulnerability in MIS which allowed white hat hackers from Red bull to traverse through files to config without authentication
+- Special characters printing error - Device KM24a doesnt print with b2p print API
+- Chinese characters not printing: No mapping for chinese characters found in logs so they were printing random characters
+- Data loss during application upgrade - Device deauthenticated and all session storage, local storage and indexes are wiped
+- MIS outage: Devices unable to connect MIS showing entrust SSL certificate expired even after certificate was valid.
+- Node JS transpiling webpack to lowest node js version
+
+-------------------------------------------------------
+Nexmosphere
+- Research and ideation going on for ICE 2025 event
+- 
